@@ -3,8 +3,6 @@ import { getData } from "./utils/getDataFromApi";
 export async function renderProducts() {
     const container = document.querySelector('.row__main');
     const products = await getData();
-    console.log(container);
-    console.log(products);
     products.forEach(product => {
         const div = `
         <div class="col col-12 col-sm-6 col-md-4 col-lg-3 mt-5">

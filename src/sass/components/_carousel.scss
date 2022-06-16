@@ -1,0 +1,43 @@
+.carousel-inner {
+    height: 60vh;
+}
+
+.carousel-item {
+    position: relative;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+    &--1 {
+        background-image: url('imgs/shopping-carts-1275480_960_720.jpg');
+    }
+
+    &--2 {
+        background-image: url('imgs/shoppingCenter.jpg');
+    }
+
+    &--3 {
+        background-image: url('imgs/supermarket.jpg');
+    }
+
+    &--4 {
+        background-image: url('imgs/delivery.jpg');
+    }
+
+    &__txt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+        font-size: 4rem;
+        line-height: 1.1;
+    }
+}
+
+.carousel-control {
+    width: 4rem;
+    height: 4rem;
+}

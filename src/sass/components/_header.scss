@@ -1,0 +1,21 @@
+.header {
+    text-align: center;
+
+    &__wrap {
+        border: 2px solid $white;
+        padding: 2rem;
+        background-color: $purple-600;
+        box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    }
+
+    &__heading {
+        color: $white;
+        font-size: 2.4rem;
+        margin-bottom: 1.8rem;
+    }
+
+    &__txt-content {
+        color: $white;
+        font-size: 1.4rem;
+    }
+}

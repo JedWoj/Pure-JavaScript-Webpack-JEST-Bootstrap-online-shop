@@ -1,1 +1,21 @@
-.card {}
+.card {
+    font-size: 1.2rem;
+    height: 40rem;
+    text-align: center;
+
+    &__btn {
+        background-color: $purple;
+        border-color: $purple;
+        font-size: 1.4rem;
+
+        &:hover,
+        &:active {
+            background-color: $purple-800;
+            border-color: $purple-800;
+        }
+    }
+}
+
+.card-img-top {
+    max-height: 30rem;
+}

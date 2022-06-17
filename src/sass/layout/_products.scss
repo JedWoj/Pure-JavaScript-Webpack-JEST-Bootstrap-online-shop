@@ -4,5 +4,10 @@
     &__btn {
         background-color: $purple-800;
         color: $white;
+
+        &:hover {
+            color: $white;
+            background-color: $purple-700;
+        }
     }
 }

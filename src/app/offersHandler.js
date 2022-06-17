@@ -6,17 +6,47 @@ export class offersHandler {
         this.active;
         this.page = -1;        
         this.getProducts();
+        this.prepareCategories();
     }
 
     async getProducts() {
         this.products = await getAllProducts();
-        console.log(this.products);
+        this.active = [...this.products];
         this.renderProducts(this.products);
-        this.active = this.products;
         this.seeMoreHandler();
     }
 
+    prepareCategories() {
+        const categories = document.querySelectorAll('.list-group-item-action');
+        categories.forEach(cat => cat.addEventListener('click', (e) => {
+            const {target} = e;
+            const category = target.closest('.list-group-item-action').textContent.trim();
+            this.getCategory(category);
+            this.handleCategoriesColors(target,categories);
+        }))
+    }
+
+    getCategory(category) {
+        const newArr = this.products.filter(obj => obj.category === category);
+        newArr.length > 0 ? this.active = [...newArr] : this.active = [...this.products];
+        this.handleCategories();
+    }
+
+    handleCategoriesColors(target,allBtns) {
+        const btns = [...allBtns]
+        btns.forEach(btn => btn.classList.remove('active'))
+        target.classList.add('active');
+    }
+
+    handleCategories() {
+        this.page = -1;
+        const container = document.querySelector('.offers');
+        container.innerHTML = '';
+        this.renderProducts(this.active);
+    }
+
     renderProducts(arr) {
+        arr = [...this.active];
         const container = document.querySelector('.offers');
         this.page++;
         for (let i = 0 + 8 * this.page; i < 8 + 8*this.page; i++) {

@@ -1,6 +1,6 @@
 import { getData } from "./utils/getDataFromApi";
 
-export async function renderProducts() {
+export async function renderLandingProducts() {
     const container = document.querySelector('.row__main');
     const products = await getData();
     products.forEach(product => {

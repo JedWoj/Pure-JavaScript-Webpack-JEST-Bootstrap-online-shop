@@ -1,0 +1,11 @@
+.category {
+    min-width: 15rem;
+    position: relative;
+
+    &__wrap {
+        position: fixed;
+        top: 50%;
+        left: 2.5rem;
+        transform: translateY(-50%);
+    }
+}

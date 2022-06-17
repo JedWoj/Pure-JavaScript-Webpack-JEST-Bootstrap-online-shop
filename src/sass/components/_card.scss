@@ -19,3 +19,14 @@
 .card-img-top {
     max-height: 30rem;
 }
+
+.card-price {
+    font-size: 2rem;
+    color: $green;
+}
+
+.card-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}

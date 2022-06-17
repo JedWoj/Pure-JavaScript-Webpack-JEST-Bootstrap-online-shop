@@ -1,9 +1,10 @@
 import "./main.scss";
 
-import { renderProducts } from "./app/renderProducts";
+import { renderLandingProducts } from "./app/renderLandingProducts";
 import {opinionsSlider} from "./app/opinionsSlider";
+import {offersHandler} from "./app/offersHandler";
 
-const opinions = new opinionsSlider();
-console.log(opinions.dots,'lolo');
+// const opinions = new opinionsSlider();
+const offers = new offersHandler();
 
-renderProducts();
+renderLandingProducts();

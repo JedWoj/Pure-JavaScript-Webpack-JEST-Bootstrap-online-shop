@@ -1,0 +1,12 @@
+.product {
+
+    &__header {}
+
+    &__wrap {}
+
+    &__img-box {
+        @media only screen and (max-width: 1200px) {
+            width: 30%;
+        }
+    }
+}

@@ -98,7 +98,7 @@ export class offersHandler {
                                     ${arr[i].price}$
                                 </p>
                                 </div>
-                                <a href="#" class="btn card__btn btn-primary">More Details</a>
+                                <a href="offers/${arr[i].id}.html" class="btn card__btn btn-primary">More Details</a>
                             </div>
                         </div>
                     </div>
@@ -111,5 +111,6 @@ export class offersHandler {
         seeMoreHandler() {
             const btn = document.querySelector('.btn-load');
             btn.addEventListener('click', this.renderProducts.bind(this,this.active));
+            console.log(this.products);
         }
     }

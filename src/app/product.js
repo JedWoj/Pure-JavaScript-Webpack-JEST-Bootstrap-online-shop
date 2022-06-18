@@ -1,9 +1,10 @@
-import { getData } from "./utils/getDataFromApi";
+export class product {
+    
+    constructor() {
 
-export async function renderLandingProducts() {
-    const container = document.querySelector('.row__main');
-    const products = await getData();
-    products.forEach(product => {
+    }
+
+    renderProduct(prod) {
         const div = `
         <div class="col col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
             <div class="card">
@@ -19,5 +20,5 @@ export async function renderLandingProducts() {
         `;
         
         container.insertAdjacentHTML("beforeend", div)
-    });
+    }
 }

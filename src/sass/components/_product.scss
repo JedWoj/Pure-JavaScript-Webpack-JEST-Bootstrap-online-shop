@@ -1,12 +1,39 @@
 .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    &__header {}
+    &__header {
+        width: 100%;
+    }
 
-    &__wrap {}
-
-    &__img-box {
-        @media only screen and (max-width: 1200px) {
-            width: 30%;
+    &__wrap {
+        @media only screen and (min-width: 992px) {
+            width: 60%;
         }
     }
+
+    &__img-box {
+        // @media only screen and (min-width: 992px) {
+        //     width: 50%;
+        // }
+    }
+
+    &__body {}
+
+    &__description {}
+
+    &__title {}
+
+    &__txt {}
+
+    &__info {}
+
+    &__price {}
+
+    &__additional-info {}
+
+    &__rate {}
+
+    &__count {}
 }

@@ -22,13 +22,27 @@ export class offersHandler {
         options.forEach(option => option.addEventListener('click', (e) => {
             const {target} = e;
             const clicked = target.closest('.dropdown-item').textContent;
-            this.checkOption.call(this, clicked)
+            this.checkOption(clicked)
         }))
     }
 
     checkOption(option) {
-        console.log('sdmakds');
-        console.log(option)
+        const container = document.querySelector('.offers');
+        container.innerHTML = '';
+        this.page = -1;
+        option === 'ascending' ? this.sortAscending() : this.sortDescending();
+    }
+
+    sortAscending() {
+        const sorted = this.active.sort((a, b) => a.price - b.price);
+        this.active = [...sorted];
+        this.renderProducts(this.active);
+    }
+
+    sortDescending() {
+        const sorted = this.active.sort((a, b) => b.price - a.price);
+        this.active = [...sorted];
+        this.renderProducts(this.active);
     }
 
     prepareCategories() {
@@ -62,9 +76,9 @@ export class offersHandler {
 
     renderProducts(arr) {
         arr = [...this.active];
-        const container = document.querySelector('.offers');
         this.page++;
-        for (let i = 0 + 8 * this.page; i < 8 + 8*this.page; i++) {
+        const container = document.querySelector('.offers');
+        for (let i = 8 * this.page; i < 8 + 8 * this.page; i++) {
                 if(!arr[i]) return 
                 const div = `
                     <div class="col col-12 col-sm-6 col-md-4 col-lg-3 mt-5">

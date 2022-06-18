@@ -7,6 +7,7 @@ export class offersHandler {
         this.page = -1;        
         this.getProducts();
         this.prepareCategories();
+        this.handleSorting();
     }
 
     async getProducts() {
@@ -14,6 +15,20 @@ export class offersHandler {
         this.active = [...this.products];
         this.renderProducts(this.products);
         this.seeMoreHandler();
+    }
+
+    handleSorting() {
+        const options = document.querySelectorAll('.dropdown-item')
+        options.forEach(option => option.addEventListener('click', (e) => {
+            const {target} = e;
+            const clicked = target.closest('.dropdown-item').textContent;
+            this.checkOption.call(this, clicked)
+        }))
+    }
+
+    checkOption(option) {
+        console.log('sdmakds');
+        console.log(option)
     }
 
     prepareCategories() {

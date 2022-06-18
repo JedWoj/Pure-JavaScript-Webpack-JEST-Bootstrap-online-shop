@@ -1,11 +1,12 @@
 .category {
     min-width: 15rem;
     position: relative;
+    font-size: 1.4rem;
 
     &__wrap {
         position: fixed;
         top: 50%;
-        left: 2.5rem;
+        left: 1.5rem;
         transform: translateY(-50%);
     }
 }

@@ -75,11 +75,16 @@ export class offersHandler {
     }
 
     renderProducts(arr) {
+        const btn = document.querySelector('.btn-load');
+        btn.classList.remove('disabled');
         arr = [...this.active];
         this.page++;
         const container = document.querySelector('.offers');
         for (let i = 8 * this.page; i < 8 + 8 * this.page; i++) {
-                if(!arr[i]) return 
+                if(!arr[i]) {
+                    btn.classList.add('disabled');
+                    return
+                }
                 const div = `
                     <div class="col col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
                         <div class="card">

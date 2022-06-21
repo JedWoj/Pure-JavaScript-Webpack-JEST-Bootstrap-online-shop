@@ -8,6 +8,11 @@
     }
 
     &__wrap {
+        border: 3px solid white;
+        border-radius: 5px;
+        background-color: $purple-600;
+        box-shadow: 8px 8px 24px 0px rgb(66, 68, 90);
+
         @media only screen and (min-width: 992px) {
             width: 60%;
         }
@@ -21,19 +26,55 @@
 
     &__body {}
 
-    &__description {}
+    &__description {
+        color: $white;
+    }
 
     &__title {}
 
-    &__txt {}
+    &__txt {
+        font-size: 1.4rem;
+    }
 
-    &__info {}
+    &__info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
+    }
 
-    &__price {}
+    &__price {
+        font-size: 2rem;
+        color: $white;
+    }
+
+    &__price-num {
+        color: $green-300;
+    }
 
     &__additional-info {}
 
-    &__rate {}
+    &__rate {
+        font-size: 1.8rem;
+        color: $white;
+    }
 
-    &__count {}
+    &__rate-num {
+        color: $yellow;
+    }
+
+    &__count {
+        font-size: 1.6rem;
+        color: $white;
+    }
+
+    &__count-num {
+        color: $red;
+    }
+
+    &__btn {
+        width: 30%;
+        margin: 1.5rem 0;
+        font-size: 1.6rem;
+    }
 }

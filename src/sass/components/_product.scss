@@ -12,6 +12,7 @@
         border-radius: 5px;
         background-color: $purple-600;
         box-shadow: 8px 8px 24px 0px rgb(66, 68, 90);
+        margin-bottom: 4rem;
 
         @media only screen and (min-width: 992px) {
             width: 60%;
@@ -19,9 +20,7 @@
     }
 
     &__img-box {
-        // @media only screen and (min-width: 992px) {
-        //     width: 50%;
-        // }
+        background-color: $white;
     }
 
     &__body {}

@@ -2,7 +2,7 @@ import { getAllProducts } from "./utils/getDataFromApi";
 export class Product {
     
     constructor() {;
-        this.getId();
+        this.renderProduct();
     }
 
     async getProducts() {
@@ -10,18 +10,23 @@ export class Product {
         return products
     }
 
-    getId() {
+    async getProduct() {
         const url = window.location.href;
         const idx = url.lastIndexOf('/')
         const id = url.slice(idx + 1, -5)
-        this.renderProduct(id)
+        const product = await this.findProduct(id);
+        return product;
     }
-    
-    async renderProduct(id) {
-        const container = document.querySelector('.product__wrap');
+
+    async findProduct(id) {
         const products = await this.getProducts();
         const [product] = products.filter(prod => prod.id === +id);
-        console.log(product);
+        return product;
+    }
+    
+    async renderProduct() {
+        const product = await this.getProduct();
+        const container = document.querySelector('.product__wrap');
         const div = `
         <figure class="product__img-box gx-0">
             <img class="img-fluid" src="${product.image}" alt="${product.title}">
@@ -51,7 +56,20 @@ export class Product {
         </div>
         <button type="button" class="product__btn btn btn-primary">Add to cart</button>
         `;
-        
+
         container.insertAdjacentHTML("beforeend", div)
+
+        this.buttonClickHandler(product);
+    }
+
+    buttonClickHandler() {
+        const btn = document.querySelector('.product__btn');
+        btn.addEventListener('click', this.addToCart.bind(this))
+    }
+
+    async addToCart() {
+        const product = await this.getProduct();
+        console.log(product);
+        localStorage.setItem(`${product.id}`, JSON.stringify(product));
     }
 }

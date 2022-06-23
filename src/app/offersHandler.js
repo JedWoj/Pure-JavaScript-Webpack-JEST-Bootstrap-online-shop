@@ -1,6 +1,7 @@
 import { getAllProducts } from "./utils/getDataFromApi";
 
 export class offersHandler {
+    
     constructor() {
         this.products;
         this.active;

@@ -69,6 +69,7 @@ export class Product {
 
     async addToCart() {
         const product = await this.getProduct();
-        localStorage.setItem(`${product.id}`, JSON.stringify(product));
+        const lSLength = localStorage.length;
+        localStorage.setItem(`${lSLength}`, JSON.stringify(product));
     }
 }

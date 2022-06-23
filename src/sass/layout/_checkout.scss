@@ -1,0 +1,35 @@
+.checkout {
+
+    &__body {
+        background-color: $white;
+    }
+
+    &__table {}
+
+    &__content {
+        text-align: center;
+    }
+
+    &__btns {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+
+    &__full-price {
+        color: $purple;
+        font-size: 2rem;
+        border-bottom: 2px solid $purple;
+    }
+
+    &__full-price-num {
+        color: $green;
+        font-size: 2.5rem;
+    }
+
+    &__btn {
+        font-size: 2rem;
+        width: 10rem;
+    }
+}

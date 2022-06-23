@@ -8,8 +8,56 @@
     <title>Shopeee</title>
 </head>
 
-<body>
-
+<body class="checkout__body">
+    <div class="checkout container container-fluid">
+        <header class="header">
+            <h1 class="header__heading header__heading--large header__heading--purple">
+                Check your order!
+            </h1>
+        </header>
+        <main class="checkout__content">
+            <table class="checkout__table table">
+                <thead>
+                    <tr>
+                        <th scope="col">On.</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody class="table__body">
+                </tbody>
+            </table>
+            <p class="checkout__full-price">
+                Total price: <span class="checkout__full-price-num">756$</span>
+            </p>
+            <div class="checkout__btns">
+                <button class="btn btn-success checkout__btn checkout__btn--pay">
+                    Pay
+                </button>
+                <button class="btn btn-danger checkout__btn checkout__btn--cancel">
+                    Cancel
+                </button>
+            </div>
+        </main>
+        <section class="popup">
+            <div class="popup__body">
+                <header class="popup__header">
+                    <h2 class="popup__heading">
+                        Success!
+                    </h2>
+                </header>
+                <div class="popup__content">
+                    <p class="popup__txt">
+                        You have bought Jeans, Tshirt, mug for 125$!
+                    </p>
+                    <button class="popup__btn btn btn-success">
+                        OK
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>

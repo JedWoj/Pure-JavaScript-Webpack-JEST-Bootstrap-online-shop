@@ -14,7 +14,7 @@
         display: flex;
         gap: 3rem;
         justify-content: center;
-        margin-top: 4rem;
+        margin: 4rem 0;
     }
 
     &__full-price {
@@ -31,5 +31,16 @@
     &__btn {
         font-size: 2rem;
         width: 10rem;
+    }
+
+    &__empty {
+        font-size: 3rem;
+        color: $red;
+        display: none;
+        text-align: center;
+
+        &--active {
+            display: block;
+        }
     }
 }

@@ -77,14 +77,17 @@ module.exports = {
         template: "./src/cart.html",
         filename: "cart.html"
     }),new HtmlWebpackPlugin({
-        template: "./src/admin.html",
-        filename: "admin.html"
+        template: "./src/admin/login.html",
+        filename: "admin/login.html"
     }),new HtmlWebpackPlugin({
         template: "./src/admin/products.html",
         filename: "admin/products.html"
     }),new HtmlWebpackPlugin({
         template: "./src/admin/products/add.html",
-        filename: "admin/products/add.html"})],
+        filename: "admin/products/add.html"
+    }),new HtmlWebpackPlugin({
+        template: "./src/admin.html",
+        filename: "admin.html"})],
     module: {
         rules: [
             {

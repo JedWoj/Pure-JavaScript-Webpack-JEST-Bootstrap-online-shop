@@ -7,12 +7,12 @@ export class AdminLogin {
 
     checkUrl() {
         const url = window.location.href;
-        if (url.includes('/admin/')) this.checkLogin();
-        if (url.includes('/admin')) this.formHandler();
+        if (url.includes('/login')) this.formHandler();
+        else if (url.includes('/admin')) this.checkLogin();
     }
 
     checkLogin() {
-        const loggedAsAdmin = JSON.parse(sessionStorage.getItem('admin')) ? JSON.parse(sessionStorage.getItem('admin')) : location.replace('http://localhost:8080/admin.html');
+        const loggedAsAdmin = sessionStorage.getItem('admin') ? sessionStorage.getItem('admin') : location.replace('http://localhost:8080/admin/login.html');
         return loggedAsAdmin;
     }
 
@@ -20,7 +20,7 @@ export class AdminLogin {
        const loginForm = document.querySelector('.login');
        loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        console.log(loginForm)
+        this.checkInputs();
        })
     }
 
@@ -28,5 +28,10 @@ export class AdminLogin {
         const name = document.querySelector('.login__input--name').value;
         const password = document.querySelector('.login__input--password').value;
         console.log(name, password);
+        console.log(this.#name, this.#password);
+        if (name === this.#name && password === this.#password) {
+            sessionStorage.setItem('admin', 'loggedIn');
+            location.replace('http://localhost:8080/admin.html');
+        } 
     }
 }

@@ -1,7 +1,7 @@
 import { getAllProducts } from "./utils/getDataFromApi";
 export class Product {
     
-    constructor() {;
+    constructor() {
         this.renderProduct();
     }
 
@@ -68,8 +68,17 @@ export class Product {
     }
 
     async addToCart() {
+        this.addCooldown();
         const product = await this.getProduct();
         const lSLength = localStorage.length;
         localStorage.setItem(`${lSLength}`, JSON.stringify(product));
+    }
+
+    addCooldown() {
+        const btn = document.querySelector('.product__btn');
+        btn.classList.add('disabled');
+        setTimeout(() => {
+            btn.classList.remove('disabled');
+        },1000)
     }
 }

@@ -5,11 +5,13 @@ import {opinionsSlider} from "./app/opinionsSlider";
 import {offersHandler} from "./app/offersHandler";
 import { Product} from "./app/product";
 import { Basket } from "./app/basketHandler";
+import { AdminLogin } from "./app/adminLogin";
 
 // const opinions = new opinionsSlider();
+const adminLogin = new AdminLogin();
 const mainPage = new LandingPage();
-const offers = new offersHandler();
 const newProduct = new Product();
+const offers = new offersHandler();
 const basket = new Basket();
 
 

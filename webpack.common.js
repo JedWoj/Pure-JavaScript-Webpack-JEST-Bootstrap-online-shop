@@ -75,7 +75,16 @@ module.exports = {
         filename: "offers/20.html",
     }),new HtmlWebpackPlugin({
         template: "./src/cart.html",
-        filename: "cart.html"})],
+        filename: "cart.html"
+    }),new HtmlWebpackPlugin({
+        template: "./src/admin.html",
+        filename: "admin.html"
+    }),new HtmlWebpackPlugin({
+        template: "./src/admin/products.html",
+        filename: "admin/products.html"
+    }),new HtmlWebpackPlugin({
+        template: "./src/admin/products/add.html",
+        filename: "admin/products/add.html"})],
     module: {
         rules: [
             {

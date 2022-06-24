@@ -97,6 +97,13 @@ module.exports = {
             {
                 test: /\.(svg|png|jpg|gif)$/i,
                 type: 'asset/resource'
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
             }
         ]
     }

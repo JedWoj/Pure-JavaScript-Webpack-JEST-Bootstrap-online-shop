@@ -1,8 +1,15 @@
 export class Basket {
     
     constructor() {
-        this.getProductsFromLS();
-        this.addButtonsHandlers();
+        this.checkUrl()
+    }
+
+    checkUrl() {
+        const url = window.location.href;
+        if (url.includes('/cart')) {
+            this.getProductsFromLS();
+            this.addButtonsHandlers();
+        };
     }
 
     getProductsFromLS() {

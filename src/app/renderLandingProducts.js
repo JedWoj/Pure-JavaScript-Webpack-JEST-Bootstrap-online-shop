@@ -3,7 +3,14 @@ import { getData } from "./utils/getDataFromApi";
 export class LandingPage {
     
     constructor() {
-        this.renderLandingProducts();
+        this.checkUrl()
+    }
+
+    checkUrl() {
+        const url = window.location.href;
+        if (url === 'http://localhost:8080/index.html' || url === 'http://localhost:8080/') {
+            this.renderLandingProducts();
+        };
     }
 
     async renderLandingProducts() {

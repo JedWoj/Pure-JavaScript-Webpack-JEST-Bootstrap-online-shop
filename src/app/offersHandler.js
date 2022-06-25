@@ -5,10 +5,17 @@ export class offersHandler {
     constructor() {
         this.products;
         this.active;
-        this.page = -1;        
-        this.getProducts();
-        this.prepareCategories();
-        this.handleSorting();
+        this.page = -1;    
+        this.checkUrl()    
+    }
+
+    checkUrl() {
+        const url = window.location.href;
+        if (url === 'http://localhost:8080/offers.html') {
+            this.getProducts();
+            this.prepareCategories();
+            this.handleSorting();
+        };
     }
 
     async getProducts() {

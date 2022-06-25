@@ -3,9 +3,16 @@ export class opinionsSlider {
     constructor() {
         this.dots = document.querySelectorAll('.opinions__dot');
         this.txtBox = document.querySelector('.opinions__text');
-        this.dotsHandler();
-        this.automaticChange();
         this.active = 2;
+        this.checkUrl();
+    }
+
+    checkUrl() {
+        const url = window.location.href;
+        if (url === 'http://localhost:8080/index.html' || url === 'http://localhost:8080/') {
+            this.dotsHandler();
+            this.automaticChange();
+        };
     }
 
     automaticChange(option) {

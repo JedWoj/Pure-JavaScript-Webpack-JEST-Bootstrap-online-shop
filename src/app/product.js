@@ -2,7 +2,14 @@ import { getAllProducts } from "./utils/getDataFromApi";
 export class Product {
     
     constructor() {
-        this.renderProduct();
+        this.checkUrl();
+    }
+
+    checkUrl() {
+        const url = window.location.href;
+        if (url.includes('/offers/')) {
+            this.renderProduct();
+        };
     }
 
     async getProducts() {

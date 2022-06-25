@@ -26,22 +26,5 @@ export class LandingPage {
     
             container.insertAdjacentHTML("beforeend", div);
         });
-
-        // this.getDivs();
     }
-
-    // getDivs() {
-    //     const btns = document.querySelectorAll('.card__btn');
-    //     console.log(btns);
-    //     btns.forEach(btn => btn.addEventListener('click', (e) => {
-    //         const {target} = e;
-    //         const cardName = target.previousElementSibling.textContent.trim();
-    //         console.log(cardName);
-    //         targetted(cardName)
-    //     }))
-    // }
 }
-
-// export function targetted(target) {
-//     console.log(target)
-// }

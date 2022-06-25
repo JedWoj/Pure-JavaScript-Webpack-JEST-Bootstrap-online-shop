@@ -7,6 +7,7 @@ import { Product} from "./app/product";
 import { Basket } from "./app/basketHandler";
 import { AdminLogin } from "./app/adminLogin";
 import { AdminList} from "./app/adminList";
+import { AdminAdd } from "./app/adminAdd";
 
 const opinions = new opinionsSlider();
 const adminLogin = new AdminLogin();
@@ -15,5 +16,6 @@ const newProduct = new Product();
 const offers = new offersHandler();
 const basket = new Basket();
 const adminList = new AdminList();
+const adminAdd = new AdminAdd();
 
 

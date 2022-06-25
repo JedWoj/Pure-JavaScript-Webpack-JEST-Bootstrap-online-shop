@@ -1,0 +1,51 @@
+.add {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $purple-700;
+    padding: 3rem;
+    border-radius: 1rem;
+
+    &__label {
+        color: $red;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+
+        &--active {}
+    }
+
+    &__btn {
+        font-size: 1.4rem;
+    }
+
+    &__id {}
+
+    &__title {}
+
+    &__price {}
+
+    &__category {}
+
+    &__description {}
+
+    &__image {
+        font-size: 1.6rem;
+        color: $white;
+    }
+
+    &__id,
+    &__title,
+    &__price,
+    &__category,
+    &__description {
+        width: 60vw;
+        height: 3rem;
+        font-size: 2rem;
+        outline: none;
+    }
+}

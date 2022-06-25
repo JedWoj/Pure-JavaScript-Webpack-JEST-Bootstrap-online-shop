@@ -8,7 +8,7 @@ export class AdminList {
 
     async checkUrl() {
         const url = window.location.href;
-        if (url.includes('admin/products')) {
+        if (url === 'http://localhost:8080/admin/products.html') {
             const products = await getAllProducts();
             this.arrProducts = [...products];
             this.renderList(products);

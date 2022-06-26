@@ -15,30 +15,22 @@
         color: $red;
         font-size: 1.5rem;
         padding: 1rem 0;
+        opacity: 0;
 
-        &--active {}
+        &--active {
+            opacity: 1;
+        }
     }
 
     &__btn {
         font-size: 1.4rem;
     }
 
-    &__id {}
-
-    &__title {}
-
-    &__price {}
-
-    &__category {}
-
-    &__description {}
-
     &__image {
         font-size: 1.6rem;
         color: $white;
     }
 
-    &__id,
     &__title,
     &__price,
     &__category,
@@ -47,5 +39,42 @@
         height: 3rem;
         font-size: 2rem;
         outline: none;
+    }
+
+    &__msg {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        display: none;
+
+        &--active {
+            display: block;
+            backdrop-filter: blur(5px);
+        }
+    }
+
+    &__msg-body {
+        padding: 3rem;
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__msg-txt {
+        font-size: 1.6rem;
+        color: $purple;
+    }
+
+    &__msg-btn {
+        font-size: 1.4rem;
+        width: 5rem;
+        margin-top: 1rem;
     }
 }

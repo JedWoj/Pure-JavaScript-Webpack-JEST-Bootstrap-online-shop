@@ -1,4 +1,6 @@
-import { getAllProducts } from "./utils/getDataFromApi";
+import {
+    getAllProducts
+} from "./utils/getDataFromApi";
 export class AdminList {
 
     constructor() {
@@ -31,7 +33,7 @@ export class AdminList {
             <button type="button" data-id="${prod.id}" class="btn-close list__item-close" aria-label="Close"></button>
         </li>
         `
-        container.insertAdjacentHTML('beforeend', div);
+            container.insertAdjacentHTML('beforeend', div);
         })
         this.deleteHandler();
     }
@@ -46,17 +48,21 @@ export class AdminList {
     }
 
     async deleteProduct(id) {
-        const response = await fetch(`https://fakestoreapi.com/products/${id}`,{
-            method:"DELETE"
-         })
+        const response = await fetch(`https://fakestoreapi.com/products/${id}`, {
+            method: "DELETE"
+        })
         const data = await response.json();
         this.refreshList(data)
     }
 
+    findIndex(arr, prod) {
+        return arr.findIndex(p => p.id === prod.id);
+    }
+
     refreshList(prod) {
         const popup = document.querySelector('.deletePopup');
-        const idx = this.arrProducts.findIndex(p => p.id === prod.id);
-        this.arrProducts.splice(idx,1);
+        const idx = this.findIndex(this.arrProducts, prod);
+        this.arrProducts.splice(idx, 1);
         this.renderList(this.arrProducts);
         popup.classList.add('deletePopup--active');
         this.okBtnHandler();

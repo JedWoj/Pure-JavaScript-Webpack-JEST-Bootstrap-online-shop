@@ -17,14 +17,12 @@ export class opinionsSlider {
 
     automaticChange(option) {
         const interval = setInterval(() => {
-            console.log(1);
             this.switchContent(this.active.toString());
             this.changeDotColor(this.active);
             this.active < 5 ? this.active++ : this.active = 1;
         }, 4000)
 
         if (option === 'stop') {
-            console.log(2);
             clearInterval(interval);
         }
     }

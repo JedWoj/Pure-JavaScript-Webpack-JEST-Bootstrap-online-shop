@@ -27,8 +27,6 @@ export class AdminLogin {
     checkInputs() {
         const name = document.querySelector('.login__input--name').value;
         const password = document.querySelector('.login__input--password').value;
-        console.log(name, password);
-        console.log(this.#name, this.#password);
         if (name === this.#name && password === this.#password) {
             sessionStorage.setItem('admin', 'loggedIn');
             location.replace('http://localhost:8080/admin.html');

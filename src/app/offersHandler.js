@@ -11,7 +11,7 @@ export class offersHandler {
 
     checkUrl() {
         const url = window.location.href;
-        if (url === 'http://localhost:8080/offers.html') {
+        if (url.includes('http://localhost:8080/offers.html')) {
             this.getProducts();
             this.prepareCategories();
             this.handleSorting();
@@ -119,6 +119,5 @@ export class offersHandler {
         seeMoreHandler() {
             const btn = document.querySelector('.btn-load');
             btn.addEventListener('click', this.renderProducts.bind(this,this.active));
-            console.log(this.products);
         }
     }

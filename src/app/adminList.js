@@ -70,7 +70,8 @@ export class AdminList {
 
     okBtnHandler() {
         const popup = document.querySelector('.deletePopup');
-        popup.addEventListener('click', () => {
+        const popupBtn = document.querySelector('.deletePopup__btn');
+        popupBtn.addEventListener('click', () => {
             popup.classList.remove('deletePopup--active');
         })
     }

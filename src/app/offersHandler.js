@@ -1,6 +1,6 @@
 import { getAllProducts } from "./utils/getDataFromApi";
 
-export class offersHandler {
+export class OffersHandler {
     
     constructor() {
         this.products;
@@ -63,8 +63,13 @@ export class offersHandler {
         }))
     }
 
+    filterProducts(arr,category) {
+        console.log(arr.filter(obj => obj.category === category));
+        return arr.filter(obj => obj.category === category);
+    }
+
     getCategory(category) {
-        const newArr = this.products.filter(obj => obj.category === category);
+        const newArr = this.filterProducts(this.products,category);
         newArr.length > 0 ? this.active = [...newArr] : this.active = [...this.products];
         this.handleCategories();
     }

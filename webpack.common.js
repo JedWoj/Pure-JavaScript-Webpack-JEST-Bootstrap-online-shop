@@ -35,9 +35,6 @@ module.exports = {
         template: "./src/offers/8.html",
         filename: "offers/8.html",
     }),new HtmlWebpackPlugin({
-        template: "./src/offers/8.html",
-        filename: "offers/9.html",
-    }),new HtmlWebpackPlugin({
         template: "./src/offers/9.html",
         filename: "offers/9.html",
     }),new HtmlWebpackPlugin({

@@ -17,4 +17,11 @@ describe("Basket", () => {
         expect(result).toBe('3.00');
         totalPriceSpy.mockClear();
     });
+
+    test("totalPrice should output NaN",() => {
+        const totalPriceSpy = jest.spyOn(basket, "totalPrice");
+        const result = basket.totalPrice([{price: NaN}, {price: 2}]);
+        expect(result).toBeNaN;
+        totalPriceSpy.mockClear();
+    })
 });

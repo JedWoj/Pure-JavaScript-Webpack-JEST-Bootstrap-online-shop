@@ -1,4 +1,4 @@
-export class opinionsSlider {
+export class OpinionsSlider {
 
     constructor() {
         this.dots = document.querySelectorAll('.opinions__dot');

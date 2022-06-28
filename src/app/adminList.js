@@ -1,6 +1,4 @@
-import {
-    getAllProducts
-} from "./utils/getDataFromApi";
+import {getAllProducts} from "./utils/getDataFromApi";
 export class AdminList {
 
     constructor() {

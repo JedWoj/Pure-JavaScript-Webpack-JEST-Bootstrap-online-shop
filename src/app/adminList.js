@@ -10,8 +10,13 @@ export class AdminList {
         const url = window.location.href;
         if (url === 'http://localhost:8080/admin/products.html') {
             const products = await getAllProducts();
-            this.arrProducts = [...products];
-            this.renderList(products);
+            if (products === undefined) {
+                const container = document.querySelector('.list__list');
+                container.innerHTML = `<h2 class='h2 errorMsg'>Timeout! Please check your internet connection and reload your page!</h2>`;
+            } else {
+                this.arrProducts = [...products];
+                this.renderList(products);
+            }
         };
     }
 

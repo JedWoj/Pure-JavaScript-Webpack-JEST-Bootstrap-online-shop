@@ -21,7 +21,7 @@ export class OpinionsSlider {
             this.changeDotColor(this.active);
             this.active < 5 ? this.active++ : this.active = 1;
         }, 4000)
-
+        
         if (option === 'stop') {
             clearInterval(interval);
         }

@@ -16,6 +16,8 @@ export class LandingPage {
     async renderLandingProducts() {
         const container = document.querySelector('.row__main');
         const products = await getData();
+        console.log(products);
+        products === undefined ? container.innerHTML = `<h2 class='h2 errorMsg'>Timeout! Please check your internet connection and reload your page!</h2>`: 
         container.innerHTML = '';
         products.forEach(product => {
             const div = `

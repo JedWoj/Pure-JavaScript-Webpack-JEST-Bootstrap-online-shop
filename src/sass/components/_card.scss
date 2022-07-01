@@ -3,6 +3,10 @@
     height: 40rem;
     text-align: center;
 
+    @media only screen and (min-width: 1600px) {
+        height: 50rem;
+    }
+
     &__btn {
         background-color: $purple;
         border-color: $purple;
@@ -18,6 +22,10 @@
 
 .card-img-top {
     max-height: 30rem;
+
+    @media only screen and (min-width: 1600px) {
+        max-height: 40rem;
+    }
 }
 
 .card-price {

@@ -1,4 +1,9 @@
 .row__main {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     @media only screen and (max-width: 576px) {
         padding: 0 5rem;
     }

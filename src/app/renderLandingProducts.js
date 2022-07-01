@@ -16,6 +16,7 @@ export class LandingPage {
     async renderLandingProducts() {
         const container = document.querySelector('.row__main');
         const products = await getData();
+        container.innerHTML = '';
         products.forEach(product => {
             const div = `
             <div class="col col-12 col-sm-6 col-md-4 col-lg-3 mt-5">

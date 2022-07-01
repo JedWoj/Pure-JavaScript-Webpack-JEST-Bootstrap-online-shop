@@ -14,7 +14,12 @@ export class Product {
 
     async getProducts() {
         const products = await getAllProducts();
-        return products
+        const container = document.querySelector('.product__wrap');
+        if (products === undefined) {
+            container.innerHTML = `<h2 class='h2 errorMsg'>Timeout! Please check your internet connection and reload your page!</h2>`;
+        } else {
+            return products
+        }
     }
 
     async getProduct() {

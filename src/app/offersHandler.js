@@ -19,12 +19,16 @@ export class OffersHandler {
     }
 
     async getProducts() {
-        this.products = await getAllProducts();
-        this.active = [...this.products];
         const container = document.querySelector('.offers');
-        container.innerHTML = '';
-        this.renderProducts(this.products);
-        this.seeMoreHandler();
+        this.products = await getAllProducts();
+        if (this.products === undefined) {
+            container.innerHTML = `<h2 class='h2 errorMsg'>Timeout! Please check your internet connection and reload your page!</h2>`;
+        } else {
+            this.active = [...this.products];
+            container.innerHTML = '';
+            this.renderProducts(this.products);
+            this.seeMoreHandler();
+        }
     }
 
     handleSorting() {

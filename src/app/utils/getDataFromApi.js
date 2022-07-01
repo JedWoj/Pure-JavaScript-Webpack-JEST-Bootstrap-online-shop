@@ -1,7 +1,7 @@
 export async function getData() {
     try {
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => {controller.abort()}, 1500)
+        const timeoutId = setTimeout(() => {controller.abort()}, 15000)
         const response = await fetch('https://fakestoreapi.com/products?limit=8', {signal: controller.signal});
         const data = await response.json();
         return data

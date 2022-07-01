@@ -21,6 +21,8 @@ export class OffersHandler {
     async getProducts() {
         this.products = await getAllProducts();
         this.active = [...this.products];
+        const container = document.querySelector('.offers');
+        container.innerHTML = '';
         this.renderProducts(this.products);
         this.seeMoreHandler();
     }

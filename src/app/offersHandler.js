@@ -1,12 +1,11 @@
 import { getAllProducts } from "./utils/getDataFromApi";
-
 export class OffersHandler {
     
     constructor() {
         this.products;
         this.active;
         this.page = -1;    
-        this.checkUrl()    
+        this.checkUrl();
     }
 
     checkUrl() {
@@ -15,7 +14,7 @@ export class OffersHandler {
             this.getProducts();
             this.prepareCategories();
             this.handleSorting();
-        };
+        }
     }
 
     async getProducts() {
@@ -81,8 +80,8 @@ export class OffersHandler {
     }
 
     handleCategoriesColors(target,allBtns) {
-        const btns = [...allBtns]
-        btns.forEach(btn => btn.classList.remove('active'))
+        const btns = [...allBtns];
+        btns.forEach(btn => btn.classList.remove('active'));
         target.classList.add('active');
     }
 

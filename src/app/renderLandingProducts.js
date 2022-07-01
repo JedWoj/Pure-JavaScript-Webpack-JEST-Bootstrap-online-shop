@@ -3,7 +3,7 @@ import { getData } from "./utils/getDataFromApi";
 export class LandingPage {
     
     constructor() {
-        this.checkUrl()
+        this.checkUrl();
     }
 
     checkUrl() {

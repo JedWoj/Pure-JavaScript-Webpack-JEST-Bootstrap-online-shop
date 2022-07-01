@@ -1,7 +1,7 @@
 export class Basket {
     
     constructor() {
-        this.checkUrl()
+        this.checkUrl();
     }
 
     checkUrl() {
@@ -49,7 +49,7 @@ export class Basket {
             table.insertAdjacentHTML('beforeend', div);
         })
         
-        document.querySelector('.checkout__full-price-num').textContent = `${this.totalPrice(products)}$`
+        document.querySelector('.checkout__full-price-num').textContent = `${this.totalPrice(products)}$`;
     }
 
     totalPrice(products) {
@@ -89,7 +89,7 @@ export class Basket {
                 </div>
             </section>
             `
-            container.insertAdjacentHTML('beforeend', popup)
+            container.insertAdjacentHTML('beforeend', popup);
     }
 
     payForOrder() {
@@ -101,7 +101,7 @@ export class Basket {
 
     popupBtnHandler() {
         const btn = document.querySelector('.popup__btn');
-        btn.addEventListener('click', this.clearPopup)
+        btn.addEventListener('click', this.clearPopup);
     }
 
     clearPopup() {

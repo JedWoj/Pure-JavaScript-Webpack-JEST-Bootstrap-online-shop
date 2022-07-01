@@ -46,7 +46,7 @@ export class AdminList {
         btns.forEach(btn => btn.addEventListener('click', (e) => {
             const {target} = e;
             const productId = target.dataset.id;
-            this.deleteProduct(productId)
+            this.deleteProduct(productId);
         }))
     }
 
@@ -55,7 +55,7 @@ export class AdminList {
             method: "DELETE"
         })
         const data = await response.json();
-        this.refreshList(data)
+        this.refreshList(data);
     }
 
     findIndex(arr, prod) {

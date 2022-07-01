@@ -31,7 +31,7 @@ export class AdminAdd {
 
     clearInputs() {
         const inputs = document.querySelectorAll('.add__input');
-        inputs.forEach(input => input.value = '') 
+        inputs.forEach(input => input.value = '');
     }
 
     errorMsg(label,action) {

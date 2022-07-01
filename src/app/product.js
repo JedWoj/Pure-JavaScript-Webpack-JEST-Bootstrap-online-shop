@@ -24,8 +24,8 @@ export class Product {
 
     async getProduct() {
         const url = window.location.href;
-        const idx = url.lastIndexOf('/')
-        const id = url.slice(idx + 1, -5)
+        const idx = url.lastIndexOf('/');
+        const id = url.slice(idx + 1, -5);
         const product = await this.findProduct(id);
         return product;
     }
@@ -69,14 +69,14 @@ export class Product {
         <button type="button" class="product__btn btn btn-primary">Add to cart</button>
         `;
 
-        container.insertAdjacentHTML("beforeend", div)
+        container.insertAdjacentHTML("beforeend", div);
 
         this.buttonClickHandler(product);
     }
 
     buttonClickHandler() {
         const btn = document.querySelector('.product__btn');
-        btn.addEventListener('click', this.addToCart.bind(this))
+        btn.addEventListener('click', this.addToCart.bind(this));
     }
 
     async addToCart() {

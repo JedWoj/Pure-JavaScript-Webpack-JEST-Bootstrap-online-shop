@@ -9,7 +9,7 @@ export class OpinionsSlider {
 
     checkUrl() {
         const url = window.location.href;
-        if (url === 'https://onilneshop.netlify.app/index.html' || url === 'https://onilneshop.netlify.app/') {
+        if (url === 'https://main--onilneshop.netlify.app/index.html' || url === 'https://main--onilneshop.netlify.app/') {
             this.dotsHandler();
             this.automaticChange();
         };

@@ -12,7 +12,7 @@ export class AdminLogin {
     }
 
     checkLogin() {
-        const loggedAsAdmin = sessionStorage.getItem('admin') ? sessionStorage.getItem('admin') : location.replace('https://onilneshop.netlify.app/admin/login.html');
+        const loggedAsAdmin = sessionStorage.getItem('admin') ? sessionStorage.getItem('admin') : location.replace('https://main--onilneshop.netlify.app/admin/login.html');
         return loggedAsAdmin;
     }
 

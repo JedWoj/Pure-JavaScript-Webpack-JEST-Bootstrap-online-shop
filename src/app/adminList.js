@@ -1,4 +1,6 @@
-import {getAllProducts} from "./utils/getDataFromApi";
+import {
+    getAllProducts
+} from "./utils/getDataFromApi";
 export class AdminList {
 
     constructor() {
@@ -8,7 +10,7 @@ export class AdminList {
 
     async checkUrl() {
         const url = window.location.href;
-        if (url === 'http://localhost:8080/admin/products.html') {
+        if (url === 'http://localhost:8080/admin/products.html' || url === 'https://onilneshop.netlify.app/admin/products.html') {
             const products = await getAllProducts();
             if (products === undefined) {
                 const container = document.querySelector('.list__list');
@@ -44,7 +46,9 @@ export class AdminList {
     deleteHandler() {
         const btns = document.querySelectorAll('.list__item-close');
         btns.forEach(btn => btn.addEventListener('click', (e) => {
-            const {target} = e;
+            const {
+                target
+            } = e;
             const productId = target.dataset.id;
             this.deleteProduct(productId);
         }))

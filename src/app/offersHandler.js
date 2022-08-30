@@ -10,7 +10,7 @@ export class OffersHandler {
 
     checkUrl() {
         const url = window.location.href;
-        if (url.includes('http://localhost:8080/offers.html')) {
+        if (url.includes('https://onilneshop.netlify.app/offers.html')) {
             this.getProducts();
             this.prepareCategories();
             this.handleSorting();

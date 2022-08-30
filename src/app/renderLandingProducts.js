@@ -8,7 +8,7 @@ export class LandingPage {
 
     checkUrl() {
         const url = window.location.href;
-        if (url === 'http://localhost:8080/index.html' || url === 'http://localhost:8080/') {
+        if (url === 'https://onilneshop.netlify.app/index.html' || url === 'https://onilneshop.netlify.app/') {
             this.renderLandingProducts();
         };
     }

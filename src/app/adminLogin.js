@@ -12,7 +12,7 @@ export class AdminLogin {
     }
 
     checkLogin() {
-        const loggedAsAdmin = sessionStorage.getItem('admin') ? sessionStorage.getItem('admin') : location.replace('http://localhost:8080/admin/login.html');
+        const loggedAsAdmin = sessionStorage.getItem('admin') ? sessionStorage.getItem('admin') : location.replace('https://onilneshop.netlify.app/admin/login.html');
         return loggedAsAdmin;
     }
 
@@ -29,7 +29,7 @@ export class AdminLogin {
         const password = document.querySelector('.login__input--password').value;
         if (name === this.#name && password === this.#password) {
             sessionStorage.setItem('admin', 'loggedIn');
-            location.replace('http://localhost:8080/admin.html');
+            location.replace('https://onilneshop.netlify.app/admin.html');
         } 
     }
 }

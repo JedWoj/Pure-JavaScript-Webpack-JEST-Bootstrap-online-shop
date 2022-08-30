@@ -1,4 +1,4 @@
-1. Wersja Live: https://onilneshop.netlify.app
+1.Wersja Live: https://onilneshop.netlify.app
 
 2.Technologie:   
 -Webpack  

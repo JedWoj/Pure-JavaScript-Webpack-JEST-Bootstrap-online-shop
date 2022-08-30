@@ -29,7 +29,7 @@ export class AdminLogin {
         const password = document.querySelector('.login__input--password').value;
         if (name === this.#name && password === this.#password) {
             sessionStorage.setItem('admin', 'loggedIn');
-            location.replace('https://onilneshop.netlify.app/admin.html');
+            location.replace('https://main--onilneshop.netlify.app/admin.html');
         } 
     }
 }

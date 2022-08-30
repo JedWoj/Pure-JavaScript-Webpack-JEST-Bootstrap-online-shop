@@ -1,8 +1,4 @@
-1.Instalacja:  
-a)w terminalu należy użyć komendy git clone https://github.com/JedWoj/Pure-JavaScript-Webpack-JEST-Bootstrap-online-shop.git   
-b)następnie w terminalu przy pomocy komendy cd należy odnaleźć folder z projektem  
-c)po odnalezieniu projektu należy użyć komendy npm i  
-d)gdy instalacja dobiegnie końca wystarczy wpisać npm start i w przeglądarce powinien się otworzyć projekt
+1. Wersja Live: https://onilneshop.netlify.app
 
 2.Technologie:   
 -Webpack  
